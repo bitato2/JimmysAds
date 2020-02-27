@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var Token = process.env.BOT_TOKEN;
-var TimeBetween = .002;
+var TimeBetween = 1.3;
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   const interval = setInterval(function(){
