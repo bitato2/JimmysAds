@@ -7,7 +7,7 @@ client.on('ready', () => {
   const interval = setInterval(function(){
     var guildList = client.guilds.array();
     try {
-        guildList.forEach(guild => guild.channels.get("name","jimmys-ads-botted").send(";bc"));
+        guildList.forEach(guild => guild.channels.find(channel => channel.name === "jimmys-ads-botted").send(";bc"));
     } catch (err) {
         console.log("Could not send message to " + guild.name);
     }
